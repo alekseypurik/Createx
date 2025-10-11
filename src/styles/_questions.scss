@@ -1,0 +1,155 @@
+.questions {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__img {
+        min-width: 350px;
+    }
+
+    &__img {
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        margin-left: 30px;
+    }
+
+    &__heading {
+        margin-bottom: 40px;
+    }
+
+    &__form-row {
+        display: flex;
+        margin-bottom: 24px;
+    }
+
+    &__form-label {
+        margin-right: 25px;
+        flex: 1 1 auto;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__form-input,
+    &__form-text {
+        display: block;
+        border: 1px solid var(--chrome);
+        border-radius: 4px;
+        padding: 13px 16px;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    &__form-input::placeholder,
+    &__form-text::placeholder {
+        color: var(--stoneGray);
+    }
+
+    &__form-text {
+        resize: none;
+        height: 128px;
+    }
+
+    &__text-label {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    &__form-checkbox {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        flex: 0 0 auto;
+        margin: 5px 12px 0 0;
+    }
+
+    &__checkbox-label {
+        margin-right: 50px;
+        display: flex;
+        width: 100%;
+    }
+
+    &__form-default {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    &__form-default:checked+.questions__form-custom {
+        background: url("../images/icons/check.svg") 50% 50% no-repeat, var(--primaryRed);
+        border: 1px solid var(--primaryRed);
+    }
+
+    &__form-custom {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border: 1px solid var(--charcoal);
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    &__form-btn {
+        width: 100%;
+        align-self: center;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .questions {
+        &__img {
+            display: none;
+            ;
+        }
+
+        &__content {
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .questions {
+        &__form-row {
+            flex-direction: column;
+        }
+
+        &__form-label {
+            margin: 0px 0px 24px 0px;
+            font-size: 14px;
+
+            &:last-child {
+                margin: 0px;
+            }
+        }
+
+        &__form-input,
+        &__form-text {
+            margin-top: 0;
+        }
+
+        &__text-label {
+            font-size: 14px;
+        }
+
+        &__checkbox-label {
+            margin: 0px 0px 24px 0px;
+            font-size: 14px;
+        }
+    }
+}

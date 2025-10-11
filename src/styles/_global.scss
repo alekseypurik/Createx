@@ -1,0 +1,221 @@
+html,
+body {
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+    color: var(--charcoal);
+    line-height: 160%;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1260px;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.overlay--show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.burger {
+    display: none;
+}
+
+.main {
+    &__about {
+        padding: 180px 0 160px;
+    }
+
+    &__directions {
+        padding-bottom: 180px;
+    }
+
+    &__cert {
+        margin-bottom: -46px;
+    }
+
+    &__companies {
+        padding: 160px 0 177px;
+    }
+
+    &__program {
+        padding: 115px 0 185px;
+    }
+
+    &__blog {
+        padding-bottom: 200px;
+    }
+
+    &__info {
+        padding-bottom: 180px;
+    }
+
+    &__questions {
+        padding-bottom: 180px;
+    }
+}
+
+.button {
+    display: inline-block;
+    font-weight: 700px;
+    letter-spacing: 0.5px;
+    line-height: 52px;
+    padding: 0 40px;
+    color: var(--white);
+    border-radius: 4px;
+    background: var(--gradient-primary);
+    white-space: nowrap;
+    transition: .3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &--empty {
+        background-image: none;
+        border-left: 2px solid var(--primaryRed);
+        border-right: 2px solid var(--orange);
+        background-image: -webkit-linear-gradient(left, #ff3f3a, #f75e05), -webkit-linear-gradient(left, #f75e05, #ff3f3a);
+        background-image: linear-gradient(left, #ff3f3a, #f75e05), linear-gradient(left, #f75e05, #ff3f3a);
+        background-size: 100% 2px;
+        background-position: 0 100%, 0 0;
+        background-repeat: no-repeat;
+        background-clip: border-box;
+
+        span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.heading {
+    color: var(--darkBlue);
+
+    &__subtitle {
+        line-height: 150%;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 130%;
+    }
+
+    &--text-center {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        background: rgba(0, 0, 0, 0.349);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    .burger {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 150;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+
+        &--follow {
+            top: 15px;
+            right: 15px;
+            box-shadow: 0 1px 8px var(--silver);
+            background-color: var(--white);
+        }
+
+        span {
+            display: block;
+            width: 30px;
+            height: 4px;
+            background-color: var(--charcoal);
+            border-radius: 3px;
+            margin: 4px 0;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 4px;
+            background-color: var(--charcoal);
+            border-radius: 3px;
+        }
+    }
+
+    .heading {
+        &__title {
+            font-size: 37px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .heading {
+        margin-bottom: 30px;
+
+        &__subtitle {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        &__title {
+            font-size: 25px;
+        }
+    }
+
+
+    .main {
+
+        &__about,
+        &__program,
+        &__blog,
+        &__info {
+            padding: 60px 0px 100px;
+        }
+
+        &__directions {
+            padding-bottom: 100px;
+        }
+
+        &__companies {
+            padding-bottom: 40px;
+        }
+
+        &__questions {
+            padding-bottom: 40px;
+        }
+    }
+}

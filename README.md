@@ -1,9 +1,8 @@
-https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white
-https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white
-https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black
-https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white
-https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white
-https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jquery&logoColor=white
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jquery&logoColor=white)
 
 Пет-проект. Создан в учебных целях.
 
